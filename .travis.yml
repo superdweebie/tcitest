@@ -16,9 +16,9 @@ after_success:
   - mkdir gh-pages
   - cd gh-pages
   - git init
-  - git remote add -t gh-pages -f origin http://github.com/superdweebie/tcitest
+  - git remote add -t gh-pages -f origin http://${GITHUBTOKEN}@github.com/superdweebie/tcitest
   - git checkout gh-pages
   - cp ../index.html index.html
   - git add .
-  - git commit -m "Travis docs build"
-  - git push http://${GITHUBTOKEN}@github.com/superdweebie/tcitest gh-pages
+  - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
+  - git push -fq origin gh-pages
