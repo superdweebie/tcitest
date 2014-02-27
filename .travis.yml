@@ -16,7 +16,7 @@ after_success:
   - mkdir gh-pages
   - cd gh-pages
   - git init
-  - git remote add -t gh-pages -f origin http://${GITHUBTOKEN}@github.com/superdweebie/tcitest
+  - git remote add -t gh-pages -f origin https://${GITHUBTOKEN}@github.com/superdweebie/tcitest
   - git checkout gh-pages
   - cp ../index.html index.html
   - git add .
