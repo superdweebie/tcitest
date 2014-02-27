@@ -21,5 +21,4 @@ after_success:
   - cp ../index.html index.html
   - git add .
   - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-  - echo $GITHUBTOKEN
   - git push -f origin gh-pages
