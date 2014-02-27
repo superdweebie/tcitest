@@ -9,3 +9,10 @@ env:
 
 script:
   - echo hello world
+
+after_success:
+  - mkdir gh-pages
+  - cd gh-pages
+  - git init
+  - git remote add -t gh-pages -f origin http://github.com/superdweebie/tcitest
+  - git checkout gh-pages
